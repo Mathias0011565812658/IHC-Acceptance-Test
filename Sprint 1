@@ -1,0 +1,65 @@
+Feature: UH-27:  Navegación por la Barra
+
+    Como usuario, quiero poder navegar fácilmente por la página para encontrar la información 
+    que necesito. 
+
+    Scenario: Navegación por barra
+
+        Given que el usuario ah ingresado a la página.
+        When  presiona un botón en la barra de navegación.
+        Then el usuario es redirigido a la sección correspondiente según el el botón elegido.
+
+
+Feature: UH-28:  Descarga de la App desde Play Store o Apple Store
+
+    Como usuario quiero ingresar directamente a la tienda de aplicaciones correspondiente para 
+    descargar la aplicación.
+
+    Scenario: Descargar por Play Store
+        Given que el usuario está interesado la aplicación 
+        And se encuentre navegando en la pagina.
+        When  este en la sección de descarga
+        And seleccione el botón de [Play Store].
+        Then es redirigido a la página de descarga en la Play Store.
+
+    Scenario: Descargarx por Apple Store
+        Given está interesado en la aplicación.
+        And se encuentre navegando en la pagina.
+        When  este en la sección de descarga
+        And selecciona el botón de [Apple Store].
+        Then es redirigido a la página de descarga en la Apple Store
+
+
+
+Feature: UH-29:  Envío de Formulario de Contacto
+
+    Como usuario deseo ponerme en contacto con la página para resolver las dudas que tenga
+
+    Scenario: Formulario enviado correctamente
+        Given que el usuario quiere contactarse con nosotros
+        And se encuentre navegando en la pagina.
+        When este en la sección de descarga
+        And llene campos correctamente y presiona enviar.
+        Then la página muestra una ventana con el mensaje  [“Envío con éxito”].
+
+    Scenario: Formulario enviado incorrectamente
+        Given que el usuario quiere contactarse con nosotros
+        And se encuentre navegando en la pagina.
+        When este en la sección de descarga
+        And llene los campos incorrectamente y presiona enviar.
+        Then la página muestra una ventana con el mensaje [“Error en el envio”].
+
+
+Feature: UH-30: Reproducción de Video sobre la Aplicación
+
+    Como usuario quiero visualizar el video para obtener una comprensión del funcionamiento 
+    la aplicación.
+
+    Scenario: Preproducción del Video
+
+        Given que el usuario quiere entender el funcionamiento de la aplicación.
+        And se encuentre navegando en la pagina.
+        When este en la sección de descarga
+        And hace [click] en el botón para ver el video explicativo.
+        Then la pagina reproduce el video de la aplicación.
+
